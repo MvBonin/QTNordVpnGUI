@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QString>
+#include <QStringListModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,7 +10,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     nvpn = new nVPN();
 
-    ui->label->setText(QString(nvpn->getStatus().c_str()));
+    ui->label->setText("Status: " + QString(nvpn->getStatus().c_str()));
+
+    QStringList countriesList = nvpn->getCountries();
+    QStringListModel *countriesModel = new QStringListModel();
+    countriesModel->setStringList(countriesList);
+
+    ui->listView->setModel(countriesModel);
+
+    QStringList out = nvpn->getCities("Germany");
 
 }
 
