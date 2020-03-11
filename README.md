@@ -5,9 +5,12 @@ Download at nordvpn.com
 
 Working:
   - Get connection status
+  - Show countries
+  - show connected server
   
 TODO:
   - Login / Logout
-  - List servers
+  - List Cities
   - connect to server
-  - show connected server
+  - disconnect
+
