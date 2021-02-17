@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QString>
+#include <QStringListModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,9 +10,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     nvpn = new nVPN();
 
+
     setUIState();
     populateCountriesList();
     ui->debugButton->hide();
+
+
 }
 
 MainWindow::~MainWindow()

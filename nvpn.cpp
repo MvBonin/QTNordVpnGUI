@@ -48,7 +48,7 @@ bool nVPN::connect(std::string country){
     std::string connectString = "nordvpn c ";
     connectString.append(country);
     std::string response = ssystem(connectString);
-    std::cout << "Connect response: " << response << std::endl;
+    //std::cout << "Connect response: " << response << std::endl;
     return getStatus();
 }
 
@@ -57,6 +57,7 @@ bool nVPN::disconnect(){
     std::string response = ssystem("nordvpn d");
     return getStatus();
 }
+
 
 bool nVPN::getStatus(){
     //Return Boolean of the current state of connection

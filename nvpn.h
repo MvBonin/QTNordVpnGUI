@@ -16,11 +16,15 @@
 #include <string>
 #include <cstdlib>
 #include <sstream>
+#include <QStringList>
 #include <vector>
+#include <string>
+
 class nVPN
 {
 public:
     nVPN();
+
     std::string getStatusString();
     bool connect(std::string country = "");
     bool disconnect();
