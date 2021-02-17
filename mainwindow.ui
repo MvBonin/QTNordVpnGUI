@@ -22,7 +22,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QWidget" name="" native="true">
+     <widget class="QWidget" name="widget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="sizeConstraint">
         <enum>QLayout::SetMaximumSize</enum>
@@ -33,7 +33,7 @@
           <enum>QLayout::SetMaximumSize</enum>
          </property>
          <item>
-          <widget class="QListView" name="listView">
+          <widget class="QListView" name="countriesList">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -43,13 +43,22 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::DoubleClicked</set>
+           </property>
            <property name="tabKeyNavigation">
+            <bool>true</bool>
+           </property>
+           <property name="alternatingRowColors">
             <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QListView" name="listView_2">
+          <widget class="QListView" name="citiesList">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -59,7 +68,13 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::DoubleClicked</set>
+           </property>
            <property name="tabKeyNavigation">
+            <bool>true</bool>
+           </property>
+           <property name="alternatingRowColors">
             <bool>true</bool>
            </property>
           </widget>
@@ -95,7 +110,17 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="debugButton">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>DEBUG</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="connectButton">
            <property name="text">
             <string>Connect</string>
            </property>
@@ -114,7 +139,7 @@
      <x>0</x>
      <y>0</y>
      <width>549</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">
