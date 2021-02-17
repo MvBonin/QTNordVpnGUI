@@ -5,12 +5,11 @@ Download at nordvpn.com
 
 Working:
   - Get connection status
-  - Show countries
+  - Show countries, cities
   - show connected server
-  
-TODO:
-  - Login / Logout
-  - List Cities
   - connect to server
   - disconnect
 
+TODO:
+  - Login / Logout
+  - Status Icon in Taskbar
