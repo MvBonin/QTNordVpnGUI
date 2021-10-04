@@ -13,3 +13,5 @@ Working:
 TODO:
   - Login / Logout
   - Status Icon in Taskbar
+
+Use QT to compile it :)
